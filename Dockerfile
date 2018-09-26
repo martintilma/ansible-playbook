@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+LABEL maintainer="Martin Tilma"
 
 RUN apt update
 RUN apt -y dist-upgrade

@@ -8,4 +8,6 @@ RUN apt-add-repository -y ppa:ansible/ansible
 RUN apt update
 RUN apt -y install ansible
 
+WORKDIR /playbook/
+
 ENTRYPOINT ["ansible-playbook"]

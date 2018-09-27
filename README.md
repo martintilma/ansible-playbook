@@ -1,5 +1,6 @@
 # Ansible from a docker image
 
+* ubuntu:latest (LTS version)
 * Ansible 2.6.x (latest from pip)
 * Couldstack python module https://github.com/exoscale/cs so we can use: https://docs.ansible.com/ansible/2.6/scenario_guides/guide_cloudstack.html
 

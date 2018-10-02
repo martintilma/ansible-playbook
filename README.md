@@ -21,3 +21,6 @@ endpoint = https://api.exoscale.ch/compute
 key = **************
 secret = **************
 ```
+
+## Docker hub
+see: https://hub.docker.com/r/martintilma/ansible-playbook/

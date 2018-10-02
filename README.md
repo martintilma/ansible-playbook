@@ -12,7 +12,7 @@ To run the playbook site.yml:
 
 To run with a directory `secrets` mounted as `/root` to pass a `.cloudstack.ini` run:
 
-`docker run -it -v "$PWD":/playbook/ -v "$PWD/secrets/":/root/ ansible-playbook site.yml`
+`docker run -it -v "$PWD":/playbook/ -v "$PWD/secrets/":/root/ martintilma/ansible-playbook site.yml`
 
 .cloudstack.ini file:
 ```

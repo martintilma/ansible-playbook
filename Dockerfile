@@ -1,12 +1,15 @@
 FROM ubuntu:latest
 LABEL maintainer="Martin Tilma"
 
-RUN apt update
-RUN apt -y dist-upgrade
-RUN apt -y install software-properties-common
-RUN apt-add-repository -y ppa:ansible/ansible
-RUN apt update
-RUN apt -y install ansible
+# create one layer, add ansible and python-cs (Cloudstack module) and cleanup
+RUN apt update && \
+    apt -y dist-upgrade && \
+    apt -y install software-properties-common && \
+    apt-add-repository -y ppa:ansible/ansible && \
+    apt update && \
+    apt -y install ansible python-cs && \
+    apt-get clean all && \
+    rm -rf /var/lib/apt/lists/*;
 
 WORKDIR /playbook/
 

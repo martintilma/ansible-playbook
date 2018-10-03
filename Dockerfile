@@ -6,7 +6,7 @@ RUN apt update && \
     apt -y install software-properties-common && \
     apt-add-repository -y ppa:ansible/ansible && \
     apt update && \
-    apt -y install ansible python-cs && \
+    apt -y install ansible python-cs python-sshpubkeys && \
     apt-get clean all && \
     rm -rf /var/lib/apt/lists/*;
 

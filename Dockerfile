@@ -3,7 +3,6 @@ LABEL maintainer="Martin Tilma"
 
 # create one layer, add ansible and python-cs (Cloudstack module) and cleanup
 RUN apt update && \
-    apt -y dist-upgrade && \
     apt -y install software-properties-common && \
     apt-add-repository -y ppa:ansible/ansible && \
     apt update && \

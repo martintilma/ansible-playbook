@@ -1,8 +1,8 @@
 # Ansible from a docker image
 
 * ubuntu:latest (LTS version)
-* Ansible 2.6.x (latest from pip)
-* Couldstack python module https://github.com/exoscale/cs so we can use: https://docs.ansible.com/ansible/2.6/scenario_guides/guide_cloudstack.html
+* Ansible 2.7.x (latest from pip)
+* Couldstack python module https://github.com/exoscale/cs so we can use: https://docs.ansible.com/ansible/2.7/scenario_guides/guide_cloudstack.html
 * python-sshpubkeys used by the cs_sshkeypair ansible module
 
 ## How to use

@@ -4,6 +4,7 @@
 * Ansible 2.7.x (latest from pip)
 * Couldstack python module https://github.com/exoscale/cs so we can use: https://docs.ansible.com/ansible/2.7/scenario_guides/guide_cloudstack.html
 * python-sshpubkeys used by the cs_sshkeypair ansible module
+* python-boto and python-boto3 used by s3_bucket
 
 ## How to use
 The default working directory in the image is set to `/playbook`

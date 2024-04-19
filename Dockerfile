@@ -1,12 +1,12 @@
 FROM ubuntu:latest
 LABEL maintainer="Martin Tilma"
 
-# create one layer, add ansible and python-cs (Cloudstack module) and cleanup
 RUN apt update && \
-    apt -y install software-properties-common && \
-    apt -y install ansible python-cs python-sshpubkeys python-boto python-boto3 && \
+    apt -y install software-properties-common less && \
+    apt -y install python3 python3-pip && \
     apt-get clean all && \
-    rm -rf /var/lib/apt/lists/*;
+    rm -rf /var/lib/apt/lists/* && \
+    pip3 --no-cache-dir install ansible exoscale;
 
 WORKDIR /playbook/
 

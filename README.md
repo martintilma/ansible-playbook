@@ -1,28 +1,18 @@
 # Ansible from a docker image
 
 * ubuntu:latest (LTS version)
-* Ansible 2.7.x (latest from pip)
-* Couldstack python module https://github.com/exoscale/cs so we can use: https://docs.ansible.com/ansible/2.7/scenario_guides/guide_cloudstack.html
-* python-sshpubkeys used by the cs_sshkeypair ansible module
-* python-boto and python-boto3 used by s3_bucket
+* Ansible (latest from pip)
+* [Exoscale python](https://pypi.org/project/exoscale/)
 
 ## How to use
 The default working directory in the image is set to `/playbook`
 
 To run the playbook site.yml:
-`docker run -it -v "$PWD":/playbook/ martintilma/ansible-playbook site.yml`
+`docker run --rm -it -v "$PWD":/playbook/ martintilma/ansible-playbook site.yml`
 
-To run with a directory `secrets` mounted as `/root` to pass a `.cloudstack.ini` run:
+To run with a directory `secrets` mounted as `/root` to pass a config file run:
 
-`docker run -it -v "$PWD":/playbook/ -v "$PWD/secrets/":/root/ martintilma/ansible-playbook site.yml`
-
-.cloudstack.ini file:
-```
-[cloudstack]
-endpoint = https://api.exoscale.ch/compute
-key = **************
-secret = **************
-```
+`docker run --rm -it -v "$PWD":/playbook/ -v "$PWD/secrets/":/root/ martintilma/ansible-playbook site.yml`
 
 ## Docker hub
 see: https://hub.docker.com/r/martintilma/ansible-playbook/

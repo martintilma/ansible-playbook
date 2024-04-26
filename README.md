@@ -16,3 +16,8 @@ To run with a directory `secrets` mounted as `/root` to pass a config file run:
 
 ## Docker hub
 see: https://hub.docker.com/r/martintilma/ansible-playbook/
+
+### Versioning / tags
+
+* 2.9.1-1.0.0 is ansible 2.9.1 and version 1.0.0 of the image
+* 2.16.6-1.0.0 is ansible 2.16.6 and version 1.0.0 of the image 

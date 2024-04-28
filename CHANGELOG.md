@@ -3,7 +3,6 @@
 ## 2.16.6-1.1.0 - April 2024
 
 ### Changed
-* Ansible version: 2.16.6
 * Ubuntu version: 24.04 LTS
 
 ### Added

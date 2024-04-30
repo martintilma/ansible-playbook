@@ -1,9 +1,8 @@
-FROM ubuntu:latest
+FROM python:3.12-slim
 LABEL maintainer="Martin Tilma"
 
 RUN apt-get update && \
-    apt-get -y install software-properties-common less openssh-client && \
-    apt-get -y install python3 python3-venv python3-pip && \
+    apt-get -y install --no-install-recommends openssh-client && \
     apt-get clean all && \
     rm -rf /var/lib/apt/lists/*;
 

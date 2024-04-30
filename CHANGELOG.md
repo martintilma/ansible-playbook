@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.16.6-1.3.0 - April 2024
+
+### Changed
+* Switched the base image from ubunut:latest to python:3.12-slim 
+
 ## 2.16.6-1.2.0 - April 2024
 
 ### Changed

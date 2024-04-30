@@ -24,3 +24,7 @@ convention: [ansible-version]-[image-version]
 Examples:
 * 2.9.1-1.0.0 is ansible 2.9.1 and version 1.0.0 of the image
 * 2.16.6-1.0.0 is ansible 2.16.6 and version 1.0.0 of the image 
+
+## Github
+
+The Dockerfile can be found on https://github.com/martintilma/ansible-playbook

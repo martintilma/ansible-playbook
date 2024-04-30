@@ -3,8 +3,8 @@
 ## 2.16.6-1.2.0 - April 2024
 
 ### Changed
-* python moved from the home directory to /python so the home directory can be mounted
-* python exoscale updated to 0.9.1 
+* Python moved from the home directory to /python so the home directory can be mounted
+* python-exoscale updated to 0.9.1 
 
 ## 2.16.6-1.1.0 - April 2024
 

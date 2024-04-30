@@ -7,13 +7,13 @@ RUN apt-get update && \
     apt-get clean all && \
     rm -rf /var/lib/apt/lists/*;
 
-RUN useradd -ms /bin/bash -d /playbook/ user
+RUN useradd -ms /bin/bash user && mkdir /python && chown user:user /python
 
 USER user
-RUN python3 -m venv ~/.local --system-site-packages && . ~/.local/bin/activate && pip3 --no-cache-dir install ansible exoscale;
+RUN python3 -m venv /python --system-site-packages && . /python/bin/activate && pip3 --no-cache-dir install ansible exoscale;
 
 WORKDIR /playbook/
 
-ENV PATH="$PATH:/playbook/.local/bin"
+ENV PATH="$PATH:/python/bin"
 
 ENTRYPOINT ["ansible-playbook"]

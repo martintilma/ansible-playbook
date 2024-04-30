@@ -1,7 +1,7 @@
 # Ansible from a docker image
 
-* ubuntu:latest (LTS version)
-* Ansible (latest from pip)
+* Base image: python:3.12-slim
+* openssh-client
 * [Exoscale python](https://pypi.org/project/exoscale/)
 
 ## How to use

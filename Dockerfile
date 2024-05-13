@@ -6,13 +6,13 @@ RUN apt-get update && \
     apt-get clean all && \
     rm -rf /var/lib/apt/lists/*;
 
-RUN useradd -ms /bin/bash user && mkdir /python && chown user:user /python
+ENV VIRTUAL_ENV="/python"
+RUN useradd -ms /bin/bash user && mkdir $VIRTUAL_ENV && chown user:user $VIRTUAL_ENV
 
 USER user
-RUN python3 -m venv /python --system-site-packages && . /python/bin/activate && pip3 --no-cache-dir install ansible exoscale;
+RUN python3 -m venv $VIRTUAL_ENV --system-site-packages && . $VIRTUAL_ENV/bin/activate && pip3 --no-cache-dir install ansible exoscale;
 
 WORKDIR /playbook/
 
-ENV PATH="$PATH:/python/bin"
-
+ENV PATH="VIRTUAL_ENV/bin:$PATH"
 ENTRYPOINT ["ansible-playbook"]

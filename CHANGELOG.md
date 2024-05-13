@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.16.6-1.4.0 - May 2024
+
+### Changed
+* Set the vertiul env for python for the entrypoint
+
 ## 2.16.6-1.3.0 - April 2024
 
 ### Changed

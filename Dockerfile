@@ -14,5 +14,5 @@ RUN python3 -m venv $VIRTUAL_ENV --system-site-packages && . $VIRTUAL_ENV/bin/ac
 
 WORKDIR /playbook/
 
-ENV PATH="VIRTUAL_ENV/bin:$PATH"
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 ENTRYPOINT ["ansible-playbook"]
